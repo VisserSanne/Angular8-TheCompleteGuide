@@ -1,0 +1,14 @@
+/* You can write the css in here, then you use 
+    styleUrl: './app.component.css
+    
+    If you wanna write it within the app.component.ts you use
+    styles: [`
+        h3 { 
+            color: blue;
+        }
+    `]
+*/
+
+h3 {
+  color: blue;
+}
