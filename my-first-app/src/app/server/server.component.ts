@@ -6,4 +6,12 @@ import { Component } from "@angular/core";
   selector: "app-server",
   templateUrl: "./server.component.html"
 })
-export class ServerComponent {}
+export class ServerComponent {
+  // The type doesn't have to be here, it's staticicly seen by the value after the =
+  serverId: number = 10;
+  serverStatus: string = "offline";
+
+  getServerStatus() {
+    return this.serverStatus;
+  }
+}
