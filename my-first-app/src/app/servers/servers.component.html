@@ -1,1 +1,21 @@
-<p>servers works!</p>
+<label>Server Name</label>
+<!-- The "$event" gives us access to the event data -->
+<input type="text" class="form-control" (input)="onUpdateServerName($event)" />
+<p>{{ serverName }}</p>
+
+<!-- This field is bound two ways (Two-Way-Databinding) which result that the field always shows the most recent value -->
+<input type="text" class="form-control" [(ngModel)]="serverName" />
+<p>{{ serverName }}</p>
+
+<!-- The disabled tag is propertybound (property binding) -->
+<button
+  class="btn btn-primary"
+  [disabled]="!allowNewServer"
+  (click)="onCreateServer()"
+>
+  Click me!
+</button>
+<p>{{ serverCreationStatus }}</p>
+
+<!-- This is String Interpolation -->
+<p [innerText]="allowNewServer"></p>
