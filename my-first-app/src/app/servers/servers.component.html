@@ -16,7 +16,8 @@
   Click me!
 </button>
 
-<!-- The syntax "ngIf" is an if statement within the element. When true the element shows -->
+<!-- The syntax "ngIf" is an if statement within the element. When true the element shows
+      Important to know is that here the attribute is here, or isn't at all -->
 <p *ngIf="serverCreated; else noServer">{{ serverCreationStatus }}</p>
 <ng-template #noServer
   ><p>{{ serverCreationStatus }}</p>

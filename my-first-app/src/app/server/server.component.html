@@ -1,3 +1,11 @@
 <!-- Here we use String Interpolation to set text dynamically -->
-<p>Server with ID {{ serverId }} is {{ getServerStatus() }}</p>
+<!-- We also use the directive "ngStyle" and "ngClass"
+    ngStyle allows you to dynamically update the style
+    ngClass allows you to add a css class on a certain value -->
+<p
+  [ngStyle]="{ backgroundColor: getColor() }"
+  [ngClass]="{ online: severStatus === 'online' }"
+>
+  Server with ID {{ serverId }} is {{ getServerStatus() }}
+</p>
 <app-servers></app-servers>
