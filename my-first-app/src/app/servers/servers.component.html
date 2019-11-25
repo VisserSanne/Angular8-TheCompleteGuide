@@ -17,7 +17,7 @@
 </button>
 
 <!-- The syntax "ngIf" is an if statement within the element. When true the element shows
-      Important to know is that here the attribute is here, or isn't at all -->
+      Important to know is that here the attribute is here, or isn't at all, aka you change the DOM -->
 <p *ngIf="serverCreated; else noServer">{{ serverCreationStatus }}</p>
 <ng-template #noServer
   ><p>{{ serverCreationStatus }}</p>
@@ -25,3 +25,6 @@
 
 <!-- This is String Interpolation -->
 <p [innerText]="allowNewServer"></p>
+
+This is 
+<app-server *ngFor="let server of servers"></app-server>
