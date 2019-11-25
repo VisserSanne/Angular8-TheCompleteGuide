@@ -15,7 +15,12 @@
 >
   Click me!
 </button>
-<p>{{ serverCreationStatus }}</p>
+
+<!-- The syntax "ngIf" is an if statement within the element. When true the element shows -->
+<p *ngIf="serverCreated; else noServer">{{ serverCreationStatus }}</p>
+<ng-template #noServer
+  ><p>{{ serverCreationStatus }}</p>
+</ng-template>
 
 <!-- This is String Interpolation -->
 <p [innerText]="allowNewServer"></p>
