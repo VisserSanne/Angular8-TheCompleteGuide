@@ -1,4 +1,4 @@
-import { Component } from "@angular/core";
+import { Component, EventEmitter, Output } from "@angular/core";
 import { headersToString } from "selenium-webdriver/http";
 
 @Component({
@@ -6,5 +6,10 @@ import { headersToString } from "selenium-webdriver/http";
   templateUrl: "./header.component.html"
 })
 export class HeaderComponent {
+  @Output() featureSelected = new EventEmitter<String>();
   collapsed = true;
+
+  onSelect(feature: String) {
+    this.featureSelected.emit(feature);
+  }
 }
